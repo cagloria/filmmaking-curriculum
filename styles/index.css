@@ -77,6 +77,7 @@ header {
 
 nav ul {
   display: flex;
+  gap: 24px;
   padding: 0;
   margin: 0;
 }
@@ -96,7 +97,7 @@ nav ul li a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 30% center;
-  padding-top: 72vh;
+  padding-top: 65vh;
   padding-bottom: 76px;
   max-height: 1024px;
 }
@@ -214,7 +215,7 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   row-gap: 24px;
-  overflow: hi;
+  overflow: hidden;
 }
 .films-container::before, .films-container::after {
   content: "";
@@ -290,8 +291,8 @@ nav ul li a {
 
 .client {
   box-sizing: border-box;
-  width: 199px;
-  height: 199px;
+  max-width: 198px;
+  height: 198px;
   background-color: hsla(0, 0%, 97%, 0.05);
   padding: 24px;
   display: flex;
