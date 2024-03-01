@@ -3,6 +3,22 @@ $color-primary: #f7f7f7;
 $color-dark: #272528;
 $side-padding: 4.4vw;
 
+.skip-link {
+    display: block;
+    background-color: $color-dark;
+    padding: 2px 10px;
+    position: absolute;
+    top: -200vh;
+    left: 0;
+    z-index: 99;
+    transition-delay: 2s;
+
+    &:focus {
+        transform: translateY(200vh);
+        transition-delay: 0s;
+    }
+}
+
 // Header
 //
 
@@ -455,12 +471,18 @@ nav {
     .social-links {
         max-width: 644px;
     }
+}
 
-    .social-links {
-        margin-top: 19px;
-        display: flex;
-        justify-content: space-between;
-        gap: 50px;
+.social-links {
+    margin-top: 19px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+    a {
+        &:hover {
+            border-bottom-color: $color-dark;
+        }
     }
 }
 
