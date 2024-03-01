@@ -230,13 +230,13 @@
 
                 <!-- Tabs -->
                 <div
-                    class="contact-container-row"
+                    class="contact-options-tabs contact-container-row"
                     role="tablist"
                     aria-label="Contact category options"
                 >
                     <button
                         id="contact-option--curriculum"
-                        class="contact-option"
+                        class="contact-options-tabs__tab"
                         role="tab"
                         aria-selected="true"
                         aria-controls="contact-panel--curriculum"
@@ -245,7 +245,7 @@
                     </button>
                     <button
                         id="contact-option--questions"
-                        class="contact-option"
+                        class="contact-options-tabs__tab"
                         role="tab"
                         aria-selected="false"
                         aria-controls="contact-panel--questions"
@@ -254,7 +254,7 @@
                     </button>
                     <button
                         id="contact-option--business"
-                        class="contact-option"
+                        class="contact-options-tabs__tab"
                         role="tab"
                         aria-selected="false"
                         aria-controls="contact-panel--business"
@@ -266,19 +266,19 @@
                 <!-- Panel -->
                 <div
                     id="contact-panel--curriculum"
-                    class="contact-container-row"
+                    class="contact-panel contact-container-row"
                     role="tabpanel"
                     tabindex="0"
                     aria-labelledby="contact-option--curriculum"
                 >
-                    <div class="contact-results-summary">
+                    <div class="contact-panel__summary">
                         <h3>Teach the best of filmmaking at your school</h3>
                         <p>
                             Set your students to success in filmmaking today.
                             Email or call to set up a consultation.
                         </p>
                     </div>
-                    <div class="contact-method">
+                    <div class="contact-panel__method">
                         <img
                             src="./assets/icon-mail.svg"
                             aria-hidden="true"
@@ -292,7 +292,7 @@
                             >
                         </p>
                     </div>
-                    <div class="contact-method">
+                    <div class="contact-panel__method">
                         <img
                             src="./assets/icon-phone.svg"
                             aria-hidden="true"
