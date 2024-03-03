@@ -374,8 +374,14 @@ nav {
         .client {
             max-width: unset;
             min-width: 200px;
+            min-height: 145px;
             flex: 1;
             padding: 24px 20px;
+        }
+    }
+
+    @media (max-width: 475px) {
+        .client {
             min-height: 100px;
         }
     }
@@ -468,6 +474,13 @@ nav {
 
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
+
+        &__method {
+            img {
+                width: 45px;
+                height: 45px;
+            }
+        }
     }
 }
 
@@ -615,20 +628,29 @@ nav {
         grid-auto-rows: auto;
         justify-content: space-between;
         column-gap: clamp(40px, 3.47vw, 50px);
-        row-gap: 40px;
+        row-gap: 24px;
 
         a {
             &:hover {
-                transform: translateY(-4px);
-            }
-            &:focus {
                 border-bottom-color: $color-dark;
             }
         }
 
+        @media (max-width: 768px) {
+            a {
+                width: 45px;
+            }
+
+            img {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
         @media (max-width: 425px) {
+            grid-template-columns: repeat(2, auto);
             margin-top: 35px;
-            grid-template-columns: auto;
+            row-gap: 40px;
         }
     }
 }

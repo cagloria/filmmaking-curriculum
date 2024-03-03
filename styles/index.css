@@ -32,7 +32,7 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(3.5rem, 5vw + 2.25rem, 4.5rem);
+  font-size: clamp(2.8125rem, 5vw + 2.25rem, 4.5rem);
   line-height: 105%;
   letter-spacing: -0.045rem;
 }
@@ -394,8 +394,13 @@ nav ul li a {
   .clients-section .client {
     max-width: unset;
     min-width: 200px;
+    min-height: 145px;
     flex: 1;
     padding: 24px 20px;
+  }
+}
+@media (max-width: 475px) {
+  .clients-section .client {
     min-height: 100px;
   }
 }
@@ -477,6 +482,10 @@ nav ul li a {
 @media (max-width: 768px) {
   .contact-panel {
     grid-template-columns: 1fr;
+  }
+  .contact-panel__method img {
+    width: 45px;
+    height: 45px;
   }
 }
 
@@ -602,18 +611,25 @@ nav ul li a {
   justify-content: space-between;
   -moz-column-gap: clamp(40px, 3.47vw, 50px);
        column-gap: clamp(40px, 3.47vw, 50px);
-  row-gap: 40px;
+  row-gap: 24px;
 }
 .social-section .social-links a:hover {
-  transform: translateY(-4px);
-}
-.social-section .social-links a:focus {
   border-bottom-color: #272528;
+}
+@media (max-width: 768px) {
+  .social-section .social-links a {
+    width: 45px;
+  }
+  .social-section .social-links img {
+    width: 35px;
+    height: 35px;
+  }
 }
 @media (max-width: 425px) {
   .social-section .social-links {
+    grid-template-columns: repeat(2, auto);
     margin-top: 35px;
-    grid-template-columns: auto;
+    row-gap: 40px;
   }
 }
 
