@@ -4,6 +4,7 @@ body {
   font-family: Heebo, sans-serif;
   margin: 0;
   position: relative;
+  overflow-x: hidden;
 }
 
 a {
@@ -136,8 +137,8 @@ nav .nav-menu-button[aria-expanded=true] {
   nav ul {
     position: absolute;
     top: 100%;
-    left: 200vw;
-    transition: left 0.2s ease-out;
+    transform: translateX(200vw);
+    transition: all 0.4s ease-out;
     right: -4.4vw;
     flex-direction: column;
     background-color: #272528;
@@ -159,18 +160,16 @@ nav .nav-menu-button[aria-expanded=true] {
     left: 0;
   }
   nav:has(.nav-menu-button[aria-expanded=true]) {
-    background-color: red;
     overflow: visible;
   }
   nav:has(.nav-menu-button[aria-expanded=true]) ul {
     width: 50vw;
-    left: unset;
+    transform: translateX(0);
   }
 }
 
 .hero-section {
-  background-image: radial-gradient(farthest-corner at 45% 40%, transparent 0%, hsla(280, 4%, 15%, 0.8) 60%), url("/assets/image-hero.png");
-  background-image: url("/assets/image-hero.png");
+  background-image: url("../assets/image-hero.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 30% center;

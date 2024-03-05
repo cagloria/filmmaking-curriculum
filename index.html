@@ -8,13 +8,14 @@
             content="Landing page for a fictional filmmaking curriculum."
         />
 
-        <link rel="stylesheet" type="text/css" href="styles/index.css" />
+        <link rel="stylesheet" type="text/css" href="./src/styles/index.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Heebo:wght@100..900&family=Libre+Baskerville&family=Oswald:wght@200..700&family=Playfair+Display:ital@0;1&family=Rubik:ital,wght@0,300;1,300&family=Unna&display=swap"
             rel="stylesheet"
         />
+        <script src="./src/script/index.js"></script>
 
         <title>Magenta Origins | Highschool filmmaking curriculum</title>
     </head>
@@ -25,7 +26,7 @@
         <header>
             <a href="./index.html">
                 <img
-                    src="./assets/logo.svg"
+                    src="./src/assets/logo.svg"
                     class="logo"
                     width="202"
                     height="41"
@@ -39,20 +40,20 @@
                     aria-haspopup="true"
                     aria-expanded="false"
                     aria-controls="nav-menu"
-                    aria-label="Open navigation"
+                    onclick="toggleNav()"
                 ></button>
                 <ul id="nav-menu" role="menu" aria-labelledby="nav-menu-button">
                     <li role="none">
-                        <a href="#" role="menuitem" tabindex="-1">Team</a>
+                        <a href="#" role="menuitem">Team</a>
                     </li>
                     <li role="none">
-                        <a href="#" role="menuitem" tabindex="-1">Courses</a>
+                        <a href="#" role="menuitem">Courses</a>
                     </li>
                     <li role="none">
-                        <a href="#" role="menuitem" tabindex="-1">Blog</a>
+                        <a href="#" role="menuitem">Blog</a>
                     </li>
                     <li role="none">
-                        <a href="#" role="menuitem" tabindex="-1">Contact</a>
+                        <a href="#" role="menuitem">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -76,7 +77,7 @@
                 <div class="intro-section__main">
                     <img
                         class="intro-section__image"
-                        src="./assets/image-intro.png"
+                        src="./src/assets/image-intro.png"
                         alt="A woman sitting sideways on an armchair with her legs over the armrest, posing casually. A man holds a camera pointed at her. The room is lit up in red and white light, giving a dramatic atmosphere."
                         width="929"
                         height="608"
@@ -95,14 +96,14 @@
 
                 <div class="classes-container">
                     <img
-                        src="./assets/image-classes-camera.png"
+                        src="./src/assets/image-classes-camera.png"
                         alt="A Sony video camera"
                         class="classes-image classes-image--1"
                         width="533"
                         height="350"
                     />
                     <img
-                        src="./assets/image-classes-cameraman.png"
+                        src="./src/assets/image-classes-cameraman.png"
                         alt="A man holding a camera with a harness"
                         class="classes-image classes-image--2"
                         width="533"
@@ -143,25 +144,25 @@
                 <div class="films-container">
                     <div class="films-container__row">
                         <img
-                            src="./assets/films/film01.png"
+                            src="./src/assets/films/film01.png"
                             alt="A young woman with blood splattered on her face is resting a baseball bat on her shoulder, looking intently to her left."
                             width="401"
                             height="203"
                         />
                         <img
-                            src="./assets/films/film02.png"
+                            src="./src/assets/films/film02.png"
                             alt="A  woman, turned into a zombie, is looking at the viewer. The lower right of her face is torn off."
                             width="401"
                             height="203"
                         />
                         <img
-                            src="./assets/films/film03.png"
+                            src="./src/assets/films/film03.png"
                             alt="A racecar jeep is being driven across a dirt plain, making a turn ot the right. Dust is swept up in the turn."
                             width="401"
                             height="203"
                         />
                         <img
-                            src="./assets/films/film04.png"
+                            src="./src/assets/films/film04.png"
                             alt="A sole microphone."
                             width="401"
                             height="203"
@@ -169,25 +170,25 @@
                     </div>
                     <div class="films-container__row">
                         <img
-                            src="./assets/films/film05.png"
+                            src="./src/assets/films/film05.png"
                             alt="A man dressed as a viking wielding a tomahawk and shouting. Rain is visible across his face."
                             width="401"
                             height="203"
                         />
                         <img
-                            src="./assets/films/film06.png"
+                            src="./src/assets/films/film06.png"
                             alt="A view from the ground showing the lower legs of a couple facing each other and standing in the snow. One is wearing gray pants and brown shoes, and the other is wearing tall tan boots. The second person is standing on their heels."
                             width="401"
                             height="203"
                         />
                         <img
-                            src="./assets/films/film07.png"
+                            src="./src/assets/films/film07.png"
                             alt="A woman wearing cowboy apparel sitting on a white horse. She is tilting her hat. The background shows a mountain with the sunset resting against it."
                             width="401"
                             height="203"
                         />
                         <img
-                            src="./assets/films/film08.png"
+                            src="./src/assets/films/film08.png"
                             alt="A man in a red shirt romantically holding a woman in a tan sweater from behind her. The man looks forward, and the woman is smiling with her eyes closed."
                             width="401"
                             height="203"
@@ -195,25 +196,25 @@
                     </div>
                     <div class="films-container__row">
                         <img
-                            src="./assets/films/film09.png"
+                            src="./src/assets/films/film09.png"
                             alt="A humanoid figure hidden behind fogged glass. The vague shape of their head and torso is visible. Their hands are pressed up against the glass."
                             width="401"
                             height="203"
                         />
                         <img
-                            src="./assets/films/film10.png"
+                            src="./src/assets/films/film10.png"
                             alt="A man holding a newspaper that is on fire. He is holding the newspaper up to cover his face."
                             width="401"
                             height="203"
                         />
                         <img
-                            src="./assets/films/film11.png"
+                            src="./src/assets/films/film11.png"
                             alt="A woman is standing in a forest covered in snow. She is wearing a red parka that contrasts against the white of the snow."
                             width="401"
                             height="203"
                         />
                         <img
-                            src="./assets/films/film12.png"
+                            src="./src/assets/films/film12.png"
                             alt="A humanoid figure with abnormally smooth features and no eyes wearing a black outfit. It stares at the viewer."
                             width="401"
                             height="203"
@@ -296,7 +297,7 @@
                     </div>
                     <div class="contact-panel__method">
                         <img
-                            src="./assets/icon-mail.svg"
+                            src="./src/assets/icon-mail.svg"
                             aria-hidden="true"
                             width="64"
                             height="64"
@@ -310,7 +311,7 @@
                     </div>
                     <div class="contact-panel__method">
                         <img
-                            src="./assets/icon-phone.svg"
+                            src="./src/assets/icon-phone.svg"
                             aria-hidden="true"
                             width="64"
                             height="64"
@@ -339,7 +340,7 @@
                 <div class="social-links">
                     <a href="#" class="social-link">
                         <img
-                            src="./assets/icon-twitter.svg"
+                            src="./src/assets/icon-twitter.svg"
                             width="54"
                             height="54"
                             aria-hidden="true"
@@ -348,7 +349,7 @@
                     </a>
                     <a href="#" class="social-link">
                         <img
-                            src="./assets/icon-facebook.svg"
+                            src="./src/assets/icon-facebook.svg"
                             alt=""
                             width="54"
                             height="54"
@@ -358,7 +359,7 @@
                     </a>
                     <a href="#" class="social-link">
                         <img
-                            src="./assets/icon-instagram.svg"
+                            src="./src/assets/icon-instagram.svg"
                             alt=""
                             width="54"
                             height="54"
@@ -368,7 +369,7 @@
                     </a>
                     <a href="#" class="social-link">
                         <img
-                            src="./assets/icon-youtube.svg"
+                            src="./src/assets/icon-youtube.svg"
                             alt=""
                             width="54"
                             height="54"
@@ -382,7 +383,7 @@
 
         <footer>
             <img
-                src="./assets/logo.svg"
+                src="./src/assets/logo.svg"
                 class="logo"
                 alt="Logo"
                 width="202"
