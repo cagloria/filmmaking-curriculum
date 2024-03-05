@@ -4,7 +4,6 @@ body {
   font-family: Heebo, sans-serif;
   margin: 0;
   position: relative;
-  overflow-x: hidden;
 }
 
 a {
@@ -99,7 +98,6 @@ header {
 
 nav {
   position: relative;
-  overflow: hidden;
   display: flex;
   justify-content: flex-end;
 }
@@ -136,13 +134,15 @@ nav .nav-menu-button[aria-expanded=true] {
 @media (max-width: 768px) {
   nav ul {
     position: absolute;
-    top: 100%;
-    transform: translateX(200vw);
-    transition: all 0.4s ease-out;
+    top: 110%;
+    width: 0;
+    overflow: hidden;
     right: -4.4vw;
+    transition: width 0.4s ease-out;
     flex-direction: column;
     background-color: #272528;
-    gap: 0;
+    gap: 8px;
+    padding: 8px 0;
     box-sizing: border-box;
   }
   nav ul a {
@@ -164,7 +164,6 @@ nav .nav-menu-button[aria-expanded=true] {
   }
   nav:has(.nav-menu-button[aria-expanded=true]) ul {
     width: 50vw;
-    transform: translateX(0);
   }
 }
 

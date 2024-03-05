@@ -40,7 +40,6 @@ header {
 
 nav {
     position: relative;
-    overflow: hidden;
     display: flex;
     justify-content: flex-end;
 
@@ -82,13 +81,15 @@ nav {
     @media (max-width: 768px) {
         ul {
             position: absolute;
-            top: 100%;
-            transform: translateX(200vw);
-            transition: all 0.4s ease-out;
+            top: 110%;
+            width: 0;
+            overflow: hidden;
             right: -$side-padding;
+            transition: width 0.4s ease-out;
             flex-direction: column;
             background-color: $color-dark;
-            gap: 0;
+            gap: 8px;
+            padding: 8px 0;
             box-sizing: border-box;
 
             a {
@@ -114,7 +115,6 @@ nav {
 
             ul {
                 width: 50vw;
-                transform: translateX(0);
             }
         }
     }
