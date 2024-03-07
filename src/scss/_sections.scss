@@ -42,6 +42,7 @@ nav {
     position: relative;
     display: flex;
     justify-content: flex-end;
+    z-index: 50;
 
     ul {
         display: flex;
@@ -89,14 +90,17 @@ nav {
             flex-direction: column;
             background-color: $color-dark;
             gap: 8px;
-            padding: 8px 0;
             box-sizing: border-box;
+
+            li {
+                border-left: 2px solid $color-primary;
+            }
 
             a {
                 width: 100%;
                 border-bottom: 0;
                 padding: 20px 0 16px 20px;
-                border-left: 4px solid transparent;
+                border-left: 3px solid transparent;
                 text-align: left !important;
 
                 &:hover {

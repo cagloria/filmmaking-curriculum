@@ -5,6 +5,22 @@ body {
   margin: 0;
   position: relative;
 }
+body::after {
+  content: "";
+  width: 0;
+  height: 100vh;
+  background-color: #272528;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  opacity: 0.75;
+  transition: width 0.4s ease-out;
+}
+body:has(header nav .nav-menu-button[aria-expanded=true])::after {
+  width: 100%;
+  opacity: 0.75;
+}
 
 a {
   color: #f7f7f7;
@@ -100,6 +116,7 @@ nav {
   position: relative;
   display: flex;
   justify-content: flex-end;
+  z-index: 50;
 }
 nav ul {
   display: flex;
@@ -142,14 +159,16 @@ nav .nav-menu-button[aria-expanded=true] {
     flex-direction: column;
     background-color: #272528;
     gap: 8px;
-    padding: 8px 0;
     box-sizing: border-box;
+  }
+  nav ul li {
+    border-left: 2px solid #f7f7f7;
   }
   nav ul a {
     width: 100%;
     border-bottom: 0;
     padding: 20px 0 16px 20px;
-    border-left: 4px solid transparent;
+    border-left: 3px solid transparent;
     text-align: left !important;
   }
   nav ul a:hover {
