@@ -2,6 +2,16 @@ const media = window.matchMedia("(max-width: 768px)");
 
 window.addEventListener("load", (e) => {
     setNavState(!media.matches);
+
+    document.addEventListener("scroll", (e) => {
+        if (
+            document
+                .getElementById("nav-menu-button")
+                .getAttribute("aria-expanded") === "true"
+        ) {
+            toggleNav();
+        }
+    });
 });
 
 media.onchange = (e) => {

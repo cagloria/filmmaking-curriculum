@@ -89,6 +89,7 @@ header {
   position: absolute;
   width: 100%;
   box-sizing: border-box;
+  overflow: hidden;
 }
 header .logo-link,
 header nav {
@@ -97,7 +98,7 @@ header nav {
 header .nav-overlay {
   content: "";
   width: 0;
-  height: 100vh;
+  height: 200vh;
   background-color: #272528;
   position: absolute;
   top: 0;
@@ -111,6 +112,9 @@ header:has(nav .nav-menu-button[aria-expanded=true]) .nav-overlay {
   opacity: 0.75;
 }
 @media (max-width: 768px) {
+  header {
+    overflow: visible;
+  }
   header .logo {
     width: 150px;
   }
@@ -343,6 +347,7 @@ nav .nav-menu-button:active {
   padding: 0 24px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   row-gap: 24px;
   overflow: hidden;
 }
