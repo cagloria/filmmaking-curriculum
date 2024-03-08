@@ -520,6 +520,7 @@ nav .nav-menu-button:active {
 @media (max-width: 768px) {
   .contact-container-row {
     margin-bottom: 40px;
+    gap: 16px;
   }
 }
 
@@ -557,6 +558,9 @@ nav .nav-menu-button:active {
 }
 .contact-panel__method a:hover {
   border-bottom-color: #272528;
+}
+.contact-panel--hidden {
+  display: none !important;
 }
 @media (max-width: 1024px) {
   .contact-panel {

@@ -1,4 +1,5 @@
 import { toggleNav, setNavState, media } from "./navigation.js";
+import { contactSetUp } from "./contact.js";
 
 window.addEventListener("load", () => {
     const navButton = document.getElementById("nav-menu-button");
@@ -17,4 +18,6 @@ window.addEventListener("load", () => {
             toggleNav();
         }
     });
+
+    contactSetUp();
 });

@@ -523,6 +523,7 @@ nav {
 
     @media (max-width: 768px) {
         margin-bottom: 40px;
+        gap: 16px;
     }
 }
 
@@ -565,6 +566,10 @@ nav {
                 border-bottom-color: $color-dark;
             }
         }
+    }
+
+    &--hidden {
+        display: none !important;
     }
 
     @media (max-width: 1024px) {
