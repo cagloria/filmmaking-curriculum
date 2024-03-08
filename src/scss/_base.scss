@@ -8,26 +8,6 @@ body {
     font-family: Heebo, sans-serif;
     margin: 0;
     position: relative;
-
-    &::after {
-        content: "";
-        width: 0;
-        height: 100vh;
-        background-color: $color-dark;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 10;
-        opacity: 0.75;
-        transition: width 0.4s ease-out;
-    }
-
-    &:has(header nav .nav-menu-button[aria-expanded="true"]) {
-        &::after {
-            width: 100%;
-            opacity: 0.75;
-        }
-    }
 }
 
 a {

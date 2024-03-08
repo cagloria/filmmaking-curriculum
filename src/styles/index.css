@@ -5,22 +5,6 @@ body {
   margin: 0;
   position: relative;
 }
-body::after {
-  content: "";
-  width: 0;
-  height: 100vh;
-  background-color: #272528;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
-  opacity: 0.75;
-  transition: width 0.4s ease-out;
-}
-body:has(header nav .nav-menu-button[aria-expanded=true])::after {
-  width: 100%;
-  opacity: 0.75;
-}
 
 a {
   color: #f7f7f7;
@@ -106,6 +90,26 @@ header {
   width: 100%;
   box-sizing: border-box;
 }
+header .logo-link,
+header nav {
+  z-index: 50;
+}
+header .nav-overlay {
+  content: "";
+  width: 0;
+  height: 100vh;
+  background-color: #272528;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 49;
+  opacity: 0.75;
+  transition: width 0.4s ease-out;
+}
+header:has(nav .nav-menu-button[aria-expanded=true]) .nav-overlay {
+  width: 100%;
+  opacity: 0.75;
+}
 @media (max-width: 768px) {
   header .logo {
     width: 150px;
@@ -116,7 +120,6 @@ nav {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  z-index: 50;
 }
 nav ul {
   display: flex;
@@ -144,20 +147,29 @@ nav .nav-menu-button {
   border: 0;
   position: absolute;
   left: 200vw;
+  border: 1px solid transparent;
+  transition: border 0.2s ease-out, background-color 0.2s ease-out;
 }
 nav .nav-menu-button[aria-expanded=true] {
   background-image: url("../assets/icon-close.svg");
 }
+nav .nav-menu-button:hover {
+  border-color: #f7f7f7;
+}
+nav .nav-menu-button:active {
+  background-color: hsla(280, 4%, 15%, 0.5);
+}
 @media (max-width: 768px) {
   nav ul {
     position: absolute;
-    top: 110%;
+    top: 130%;
     width: 0;
     overflow: hidden;
     right: -4.4vw;
     transition: width 0.4s ease-out;
     flex-direction: column;
     background-color: #272528;
+    padding: 2px 0;
     gap: 8px;
     box-sizing: border-box;
   }
