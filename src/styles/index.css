@@ -207,7 +207,7 @@ nav .nav-menu-button:active {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 30% center;
-  padding-top: 65vh;
+  padding-top: 55vh;
   padding-bottom: 76px;
   max-height: 1024px;
 }
@@ -372,6 +372,8 @@ nav .nav-menu-button:active {
   -moz-column-gap: 24px;
        column-gap: 24px;
   overflow: hidden;
+  justify-content: center;
+  width: 100%;
 }
 
 .film {

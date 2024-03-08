@@ -167,17 +167,11 @@ nav {
 //
 
 .hero-section {
-    // background-image: radial-gradient(
-    //         farthest-corner at 45% 40%,
-    //         transparent 0%,
-    //         hsla(280, 4%, 15%, 0.8) 60%
-    //     ),
-    //     url("../assets/image-hero.png");
     background-image: url("../assets/image-hero.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 30% center;
-    padding-top: 65vh;
+    padding-top: 55vh;
     padding-bottom: 76px;
     max-height: 1024px;
 
@@ -364,6 +358,8 @@ nav {
         display: flex;
         column-gap: 24px;
         overflow: hidden;
+        justify-content: center;
+        width: 100%;
     }
 }
 
