@@ -14,9 +14,10 @@ const contactOptions = [
 ];
 
 /**
- * Set up onclick functionality for each contact tab.
+ * Set up functionality for tabs and hides currently inactive panels. First
+ * tab is set to active per index.html file.
  */
-export function contactSetUp() {
+export function setUpContact() {
     contactOptions.forEach((option) => {
         const tab = document.getElementById(option.tabID);
         const panel = document.getElementById(option.panelID);
@@ -38,12 +39,14 @@ export function contactSetUp() {
 function switchPanel(option) {
     const tab = document.getElementById(option.tabID);
 
+    // Set all tabs to inactive, then selected tab to active
     contactOptions.forEach((element) => {
         const tab = document.getElementById(element.tabID);
         tab.setAttribute("aria-selected", "false");
     });
     tab.setAttribute("aria-selected", "true");
 
+    // Hides all inactive panels and opens active panel
     contactOptions.forEach((element) => {
         const tab = document.getElementById(element.tabID);
         const panel = document.getElementById(element.panelID);
