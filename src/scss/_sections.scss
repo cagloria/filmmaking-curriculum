@@ -328,13 +328,21 @@ nav {
 }
 
 .films-container {
+    $gap: 24px;
+    $marquee-duration: 15s;
+
     position: relative;
-    padding: 0 24px;
+    padding: 0 $gap;
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 24px;
+    row-gap: $gap;
     overflow: hidden;
+
+    img {
+        object-fit: contain;
+        width: 100%;
+    }
 
     &::before,
     &::after {
@@ -356,17 +364,86 @@ nav {
 
     &__row {
         display: flex;
-        column-gap: 24px;
+        flex-direction: row;
+        column-gap: $gap;
         overflow: hidden;
-        justify-content: center;
+        justify-content: flex-start;
         width: 100%;
-    }
-}
 
-.film {
-    width: 401px;
-    height: 203px;
-    background-color: gray;
+        &:nth-of-type(odd) {
+            .films-container__films-list {
+                animation: marquee-to-right $marquee-duration linear infinite;
+
+                @keyframes marquee-to-right {
+                    from {
+                        transform: translateX(0);
+                    }
+                    to {
+                        transform: translateX(calc(-100% - $gap));
+                    }
+                }
+            }
+        }
+
+        &:nth-of-type(even) {
+            .films-container__films-list {
+                animation: marquee-to-left $marquee-duration linear infinite;
+
+                @keyframes marquee-to-left {
+                    from {
+                        transform: translateX(calc(-100% - $gap));
+                    }
+                    to {
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+    }
+
+    &__films-list {
+        display: flex;
+        flex-shrink: 0;
+        flex-direction: row;
+        justify-content: space-around;
+        min-width: 100%;
+        column-gap: $gap;
+    }
+
+    @media (prefers-reduced-motion) {
+        &__row {
+            &:nth-of-type(odd) {
+                animation: reverse;
+            }
+
+            &:nth-of-type(even) {
+                .films-container__films-list {
+                    animation: marquee-to-left $marquee-duration linear infinite;
+
+                    @keyframes marquee-to-left {
+                        from {
+                            transform: translateX(calc(-100% - $gap));
+                        }
+                        to {
+                            transform: translateX(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        img {
+            height: 150px;
+        }
+    }
+
+    @media (max-width: 475px) {
+        img {
+            height: 100px;
+        }
+    }
 }
 
 // Clients
