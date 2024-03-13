@@ -156,8 +156,7 @@ nav {
             overflow: visible;
 
             ul {
-                width: 50vw;
-                // width: 100vw;
+                width: clamp(200px, 50vw, 90vw);
             }
         }
     }
@@ -557,11 +556,13 @@ nav {
             position: unset;
             top: unset;
             justify-self: unset;
+            text-align: center;
         }
 
         p:first-of-type {
             grid-row: 2;
             grid-column: 1 / -1;
+            text-align: center;
         }
 
         .clients-container {

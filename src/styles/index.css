@@ -198,7 +198,7 @@ nav .nav-menu-button:active {
     overflow: visible;
   }
   nav:has(.nav-menu-button[aria-expanded=true]) ul {
-    width: 50vw;
+    width: clamp(200px, 50vw, 90vw);
   }
 }
 
@@ -556,10 +556,12 @@ nav .nav-menu-button:active {
     position: unset;
     top: unset;
     justify-self: unset;
+    text-align: center;
   }
   .clients-section p:first-of-type {
     grid-row: 2;
     grid-column: 1/-1;
+    text-align: center;
   }
   .clients-section .clients-container {
     grid-column: 1/-1;
