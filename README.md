@@ -2,7 +2,7 @@
 
 ![Preview of the landing page](./thumbnail.png)
 
-<p align="center">A landing page for a brand providing a filmmaking curriculum for high school students.</p>
+A concept landing page for a brand that provides a filmmaking curriculum for high school students. The page was designed in Figma with a modern look in mind, emphasizing the skills provided by the curriculum and providing multiple ways to contact the brand. It was then developed via HTML, CSS, and JavaScript with a focus on accessibility and user interaction. The code repository was uploaded to GitHub and deployed to GitHub Pages to provide a live demonstration.
 
 ## Links
 
