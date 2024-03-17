@@ -6,6 +6,6 @@ A concept landing page for a brand that provides a filmmaking curriculum for hig
 
 ## Links
 
-[![C.A. Gloria portfolio](https://img.shields.io/badge/My_Portfolio-2a2c36?style=for-the-badge)](https://cagloria.webflow.io/)
+[![My Portfolio](https://img.shields.io/badge/My_Portfolio-2a2c36?style=for-the-badge)](https://www.cagloria.com/)
 [![Project on Behance](https://img.shields.io/badge/See_design_on_behance-1769FF?style=for-the-badge&logo=behance)](https://www.behance.net/gallery/192305587/Filmmaking-Curriculum-Landing-Page-Web-Design)
 [![Demo](https://img.shields.io/badge/Demo-F7F7F7?style=for-the-badge)](https://cagloria.github.io/filmmaking-curriculum/)
