@@ -552,7 +552,7 @@ nav .nav-menu-button:active {
   transition: all 0.3s ease-out;
 }
 .clients-section .client:hover {
-  transform: scale(103%);
+  transform: scale(1.03);
   background-color: hsla(0, 0%, 97%, 0.8);
   color: #272528;
 }

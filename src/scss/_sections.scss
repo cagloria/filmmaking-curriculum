@@ -60,6 +60,7 @@ header {
 
     @media (max-width: 768px) {
         overflow: visible;
+
         .logo {
             width: 150px;
         }
@@ -434,6 +435,7 @@ nav {
             from {
                 transform: translateX(0);
             }
+
             to {
                 transform: translateX(calc(-100% - var(--gap)));
             }
@@ -504,6 +506,7 @@ nav {
             &__films-list {
                 grid-template-columns: 1fr;
             }
+
             img {
                 height: unset;
             }
@@ -569,7 +572,7 @@ nav {
         transition: all 0.3s ease-out;
 
         &:hover {
-            transform: scale(103%);
+            transform: scale(1.03);
             background-color: $color-hover-light-bg;
             color: $color-dark;
         }
@@ -938,6 +941,7 @@ footer {
         letter-spacing: 0.0175rem;
         margin-bottom: 10px;
     }
+
     a,
     p {
         font-size: 0.875rem;
